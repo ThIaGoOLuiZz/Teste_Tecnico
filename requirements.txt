@@ -1,2 +1,4 @@
 selenium
 pytesseract
+requests
+pillow
