@@ -91,7 +91,7 @@ def obter_valores_tabela():
 def criar_csv(lista):
    with open("resultado.csv", mode="w", newline="", encoding="utf-8") as arquivo:
       writer = csv.writer(arquivo)
-      writer.writerow(["id","Data_Vencimento","Data_Fatura","Fatura"])
+      writer.writerow(["id","Data_Vencimento","Data_Fatura","Fatura","Link_Imagem"])
       writer.writerows(lista)
 
 def main():
@@ -121,7 +121,8 @@ def main():
   for linha in lista:
     id = linha[0]
     data_venc = linha[1]
-    nome_arquivo = linha[2].split("/")[-1]
+    link_img = linha[2]
+    nome_arquivo = link_img.split("/")[-1]
 
     caminho = f"faturas/{nome_arquivo}"
     valores_ocr = ocr_imagem(caminho)
@@ -129,7 +130,7 @@ def main():
     fatura = valores_ocr[0]
     data_fatura = valores_ocr[1]
 
-    lista_csv.append([id,data_venc,data_fatura,fatura])
+    lista_csv.append([id,data_venc,data_fatura,fatura,link_img])
 
   criar_csv(lista_csv)
   
