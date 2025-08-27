@@ -73,7 +73,7 @@ def obter_valores_tabela():
   driver = webdriver.Chrome()
   driver.get("https://rpachallengeocr.azurewebsites.net/")
 
-  WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "start")))
+  WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "tableSandbox")))
   driver.execute_script("$('#tableSandbox').DataTable().page.len(12).draw();")
 
   script_retorno_matriz = """
