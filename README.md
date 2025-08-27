@@ -6,7 +6,7 @@
 - `regex_data(texto)`: Extrai e formata datas no formato `yyyy-mm-dd` ou datas escritas por extenso (ex: Jun 1, 2019).
 - `regex_fatura(texto)`: Extrai o código da fatura a partir do texto extraído.
 - `obter_valores_tabela()`: Usa Selenium para acessar a página, aguardar a tabela carregar, e extrair os dados da tabela.
-- `criar_csv(lista)`: Cria o arquivo CSV com as colunas: `id`, `Data_Vencimento`, `Data_Fatura`, `Fatura`.
+- `criar_csv(lista)`: Cria o arquivo CSV com as colunas: `id`, `Data_Vencimento`, `Data_Fatura`, `Fatura`,`Link_Imagem`.
 - `main()`: Orquestra a execução do script.
 
 ## Decisões Técnicas e Otimizações
